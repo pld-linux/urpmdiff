@@ -1,0 +1,12 @@
+--- urpmdiff-1.1/Makefile.PL~	2005-07-06 08:03:31.000000000 +0300
++++ urpmdiff-1.1/Makefile.PL	2005-07-06 08:03:32.000000000 +0300
+@@ -1,8 +1,7 @@
+ use strict;
+ use ExtUtils::MakeMaker;
+-use MDK::Common qw(cat_);
+ 
+-(my $urpmdiff_version) = cat_('urpmdiff.spec') =~ /define\s+version\s+(\d+\.\d+)/
++(my $urpmdiff_version) = `cat urpmdiff.spec` =~ /define\s+version\s+(\d+\.\d+)/
+     or die "no version found\n";
+ 
+ sub MY::postamble {
