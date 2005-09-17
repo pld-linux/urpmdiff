@@ -36,7 +36,7 @@ star± a now± wersj± pakietu. Wyj¶cie przypomina format unified diff.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
