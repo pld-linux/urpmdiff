@@ -10,6 +10,7 @@ Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	eca3b2f8fbc1f46a225fc769f669c30b
 Patch0:		%{name}-no-MDK.patch
 URL:		http://cvs.mandrakesoft.com/cgi-bin/cvsweb.cgi/soft/urpmdiff
+BuildRequires:	rpm-perlprov
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
