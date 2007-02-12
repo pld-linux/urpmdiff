@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	A tool to show diffs between rpms
-Summary(pl):	Narzêdzie do pokazywania ró¿nic miêdzy pakietami rpm
+Summary(pl.UTF-8):   NarzÄ™dzie do pokazywania rÃ³Å¼nic miÄ™dzy pakietami rpm
 Name:		urpmdiff
 Version:	1.1
 Release:	1
@@ -19,10 +19,10 @@ urpmdiff shows the differences between two rpms. It's intended to help
 packagers to know what has changed between an old and a new version of
 an rpm. Its output is reminiscent of the unified diff format.
 
-%description -l pl
-urpmdiff pokazuje ró¿nice miêdzy dwoma pakietami rpm. Jego zadaniem
-jest pomoc osobom pakietuj±cym, aby wiedzia³y, co zmieni³o siê miêdzy
-star± a now± wersj± pakietu. Wyj¶cie przypomina format unified diff.
+%description -l pl.UTF-8
+urpmdiff pokazuje rÃ³Å¼nice miÄ™dzy dwoma pakietami rpm. Jego zadaniem
+jest pomoc osobom pakietujÄ…cym, aby wiedziaÅ‚y, co zmieniÅ‚o siÄ™ miÄ™dzy
+starÄ… a nowÄ… wersjÄ… pakietu. WyjÅ›cie przypomina format unified diff.
 
 %prep
 %setup -q
