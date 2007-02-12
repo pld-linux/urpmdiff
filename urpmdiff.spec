@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	A tool to show diffs between rpms
-Summary(pl.UTF-8):   Narzędzie do pokazywania różnic między pakietami rpm
+Summary(pl.UTF-8):	Narzędzie do pokazywania różnic między pakietami rpm
 Name:		urpmdiff
 Version:	1.1
 Release:	1
