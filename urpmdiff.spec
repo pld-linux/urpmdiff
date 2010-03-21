@@ -2,13 +2,12 @@
 Summary:	A tool to show diffs between rpms
 Summary(pl.UTF-8):	Narzędzie do pokazywania różnic między pakietami rpm
 Name:		urpmdiff
-Version:	1.1
-Release:	2
+Version:	1.9
+Release:	1
 License:	GPL
 Group:		Development
 Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	eca3b2f8fbc1f46a225fc769f669c30b
-Patch0:		%{name}-no-MDK.patch
+# Source0-md5:	27126991f25d464e87f985825a8e3cd2
 URL:		http://cvs.mandrakesoft.com/cgi-bin/cvsweb.cgi/soft/urpmdiff
 BuildRequires:	rpm-perlprov
 BuildArch:	noarch
@@ -26,7 +25,6 @@ starą a nową wersją pakietu. Wyjście przypomina format unified diff.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
@@ -39,11 +37,13 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+rm $RPM_BUILD_ROOT%{perl_vendorarch}/auto/urpmdiff/.packlist
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%{_bindir}/urpmdiff
+%{_mandir}/man1/urpmdiff.1p*
