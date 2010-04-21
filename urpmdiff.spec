@@ -3,7 +3,7 @@ Summary:	A tool to show diffs between rpms
 Summary(pl.UTF-8):	Narzędzie do pokazywania różnic między pakietami rpm
 Name:		urpmdiff
 Version:	1.9
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development
 Source0:	%{name}-%{version}.tar.bz2
