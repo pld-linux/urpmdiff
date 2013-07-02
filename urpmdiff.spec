@@ -3,7 +3,7 @@ Summary:	A tool to show diffs between rpms
 Summary(pl.UTF-8):	Narzędzie do pokazywania różnic między pakietami rpm
 Name:		urpmdiff
 Version:	1.9
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development
 Source0:	%{name}-%{version}.tar.bz2
@@ -33,7 +33,6 @@ starą a nową wersją pakietu. Wyjście przypomina format unified diff.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
@@ -45,5 +44,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%{_bindir}/urpmdiff
+%attr(755,root,root) %{_bindir}/urpmdiff
 %{_mandir}/man1/urpmdiff.1p*
