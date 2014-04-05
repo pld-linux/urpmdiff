@@ -2,13 +2,13 @@
 Summary:	A tool to show diffs between rpms
 Summary(pl.UTF-8):	Narzędzie do pokazywania różnic między pakietami rpm
 Name:		urpmdiff
-Version:	1.9
-Release:	3
+Version:	2.0
+Release:	1
 License:	GPL
 Group:		Development
-Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	27126991f25d464e87f985825a8e3cd2
-URL:		http://cvs.mandrakesoft.com/cgi-bin/cvsweb.cgi/soft/urpmdiff
+Source0:	https://abf.rosalinux.ru/software/urpmdiff/archive/%{name}-v%{version}.tar.gz
+# Source0-md5:	3c867ef9492a432a3c52bf90359870fd
+URL:		https://abf.rosalinux.ru/software/urpmdiff
 BuildRequires:	rpm-perlprov
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,7 +24,7 @@ jest pomoc osobom pakietującym, aby wiedziały, co zmieniło się między
 starą a nową wersją pakietu. Wyjście przypomina format unified diff.
 
 %prep
-%setup -q
+%setup -q -n %{name}-v%{version}
 
 %build
 %{__perl} Makefile.PL \
@@ -45,4 +45,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog
 %attr(755,root,root) %{_bindir}/urpmdiff
-%{_mandir}/man1/urpmdiff.1p*
+%{_mandir}/man1/urpmdiff.1*
