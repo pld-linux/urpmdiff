@@ -2,12 +2,12 @@
 Summary:	A tool to show diffs between rpms
 Summary(pl.UTF-8):	Narzędzie do pokazywania różnic między pakietami rpm
 Name:		urpmdiff
-Version:	2.0
+Version:	2.0.1
 Release:	1
 License:	GPL
 Group:		Development
 Source0:	https://abf.rosalinux.ru/software/urpmdiff/archive/%{name}-v%{version}.tar.gz
-# Source0-md5:	3c867ef9492a432a3c52bf90359870fd
+# Source0-md5:	e3990501d53c5a60c378c443c8793346
 URL:		https://abf.rosalinux.ru/software/urpmdiff
 BuildRequires:	rpm-perlprov
 BuildArch:	noarch
